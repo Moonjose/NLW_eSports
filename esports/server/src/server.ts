@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-
+require('dotenv').config();
 import { PrismaClient } from '@prisma/client';
 import { convertHoursStringToMinutes } from './utils/convert-hour-string-to-minutes';
 import { convertMinutesToHourString } from './utils/convert-minutes-to-hour-string';
@@ -87,4 +87,4 @@ app.post('/games/:id/ads', async (req, res) => {
   return res.status(201).json(ad);
 })
 
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
