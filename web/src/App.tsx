@@ -4,7 +4,6 @@ import logoImg from './assets/logo_esportsnlw.svg';
 import GameBanner from './components/GameBanner';
 import CreateAdBanner from './components/CreateAdBanner';
 import * as Dialog from '@radix-ui/react-dialog';
-
 import CreateAdModal from './components/CreateAdModal';
 import axios from 'axios';
 
@@ -16,12 +15,10 @@ interface Game {
     ads: number;
   }
 }
-
 function App() {
   const [games, setGames] = useState<Game[]>([]);
-
   useEffect(() => {
-    axios('http://localhost:5000/games')
+    axios(`${import.meta.env.VITE_API_URL}/games`)
     .then(res => {
       setGames(res.data);
     })
