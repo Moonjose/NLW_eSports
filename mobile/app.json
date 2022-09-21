@@ -19,7 +19,8 @@
     ],
     "ios": {
       "userInterfaceStyle": "dark",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jodvs.mobile"
     },
     "android": {
       "adaptiveIcon": {
