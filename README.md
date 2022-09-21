@@ -8,6 +8,8 @@
 
 * Encontrar anúncios publicados e obter o discord do usuário.
 
+* Download do .apk https://www.mediafire.com/file/mz3u0hqy2ufat6c/nlwEsports.apk/file
+
 # Project features (EN)
 
 ## Web Version
@@ -15,6 +17,8 @@
 * Post an ad with information to find a duo.
 
 ## Mobile Version
+
+* .apk download https://www.mediafire.com/file/mz3u0hqy2ufat6c/nlwEsports.apk/file
 
 * Find published ads and get user discord.
 
