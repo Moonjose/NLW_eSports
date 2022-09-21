@@ -27,5 +27,11 @@ export const styles = StyleSheet.create({
     color: THEME.COLORS.CAPTION_300,
     fontSize: THEME.FONT_SIZE.MD,
     fontFamily: THEME.FONT_FAMILY.REGULAR,
+  },
+  backImg: {
+    width: '100%',
+    height: 75,
+    padding: 16,
+    backgroundColor: 'rgba(139, 92, 246, 1)',
   }
 });

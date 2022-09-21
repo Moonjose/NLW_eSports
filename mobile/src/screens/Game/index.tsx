@@ -25,20 +25,29 @@ export function Game() {
   const navigation = useNavigation();
 
   async function getDiscordUser(adsId: string) {
-    fetch(`http://192.168.0.21:5000/ads/${adsId}/discord`)
+    fetch(`https://findurduo.herokuapp.com/ads/${adsId}/discord`)
     .then(res => res.json())
     .then(data => setDiscordDuoSelected(data.discord));
   }
 
-  function handleGoBack() {
-    navigation.goBack();
+  async function fetchData() {
+    try {
+      const response = await fetch(`https://findurduo.herokuapp.com/games/${game.id}/ads`);
+      const data = await response.json();
+      setDuos(data);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
-    fetch(`http://192.168.0.21:5000/games/${game.id}/ads`)
-    .then(res => res.json())
-    .then(data => setDuos(data))
+    fetchData();
   },[])
+
+  function handleGoBack() {
+    navigation.goBack();
+  }
 
   return (
     <Background>

@@ -3,7 +3,7 @@ import { View, Modal, ModalProps, Text, TouchableOpacity, Alert, ActivityIndicat
 import { styles } from './styles';
 import { MaterialIcons } from '@expo/vector-icons';
 import { THEME } from '../../theme';
-import { Activity, CheckCircle } from 'phosphor-react-native';
+import { CheckCircle } from 'phosphor-react-native';
 import { Heading } from '../Heading';
 import * as Clipboard from 'expo-clipboard';
 
